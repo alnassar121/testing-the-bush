@@ -1,3 +1,4 @@
+from __future__ import unicode_literals
 from django.db import models
 from django.core.urlresolvers import reverse
 
@@ -11,4 +12,4 @@ class Post(models.Model):
         return self.title
 
     def get_detail_url(self):
-    	return reverse("detail", kwrgs={"post_id":self.id})
+    	return reverse("posts:detail", kwargs={"post_id":self.id})

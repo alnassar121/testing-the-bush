@@ -9,7 +9,7 @@
 
 	{% for item in post_items %}
 		<ul>
-			<a href="{% url 'detail' post_id=item.id %}"><li>{{item.title}}</li>
+			<a href="{{item.get_detail_url}}"><li>{{item.title}}</li>
 			<li>{{item.content}}</li>
 			<li>{{item.id}}</li></a>
 		</ul>
